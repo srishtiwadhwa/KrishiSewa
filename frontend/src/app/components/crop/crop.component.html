@@ -1,0 +1,55 @@
+
+<div class="bg">
+    <div class="bx">
+      <h2><span class="quote">CROP PREDICTION</span></h2>
+      <h3>Find out the most suitable crop to grow in your farm</h3><br>
+  
+      <form action="/" method="POST">
+        <div class="form__group">
+          <div class="box">
+            <label for="lang" class="form__label">Nitrogen</label>
+            <input class="form__field" type="text" name="Nitrogen" placeholder="Enter Nitrogen value"
+              required="required" id="lang">
+          </div>
+          <div class="box">
+            <label for="mem" class="form__label">Potassium</label>
+            <input class="form__field" type="text" name="Potassium" placeholder="Enter Potassium value"
+              required="required" id="mem">
+          </div>
+          <div class="box">
+            <label for="sp" class="form__label">Phosphorus</label>
+            <input class="form__field" type="text" name="Phosphorus" placeholder="Enter Phosphorus value"
+              required="required" id="sp">
+          </div>
+          <div class="box">
+            <label for="vis" class="form__label">pH level</label>
+            <input class="form__field" type="text" name="pH" placeholder="Enter pH value(0-14)" required="required"
+              id="vis">
+          </div>
+          <div class="box">
+            <label for="aud" class="form__label">Rainfall(mm)</label>
+            <input class="form__field" type="text" name="Rainfall" placeholder="Enter the value in mm"
+              required="required" id="aud">
+          </div>
+          <div class="box">
+            <label for="city_id" class="form__label">City</label>
+            <input class="form__field" type="text" name="city" placeholder="Enter the city"
+              required="required" id="city_id">
+  
+          </div>
+        </div>
+        <h1>
+          <button class="btn" type="submit">
+            PREDICT
+          </button>
+        </h1>
+      </form>
+      
+      <br />
+      <br /><span class="w" id="answer">
+        
+      </span>
+    </div>
+  
+  </div>
+  

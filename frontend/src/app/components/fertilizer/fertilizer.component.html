@@ -1,0 +1,207 @@
+
+<div class="bg">
+    <div class="bx">
+        <h2><span class="quote">FERTILIZER SUGGESTION</span></h2>
+        <h3>"Get informed advice on fertilizer based on soil type and recommended crop"</h3><br>
+
+        <div class="form__group">
+            <div class="box">
+                <label for="N" class="form__label">Nitrogen</label>
+                <input class="form__field" type="text" name="Nitrogen" placeholder="Enter Nitrogen value"
+                    required="required" id="N">
+            </div>
+            <div class="box">
+                <label for="K" class="form__label">Potassium</label>
+                <input class="form__field" type="text" name="Potassium" placeholder="Enter Potassium value"
+                    required="required" id="K">
+            </div>
+            <div class="box">
+                <label for="P" class="form__label">Phosphorus</label>
+                <input class="form__field" type="text" name="Phosphorus" placeholder="Enter Phosphorus value"
+                    required="required" id="P">
+            </div>
+            <div class="box">
+                <label for="crop_id" class="form__label">Crop</label>
+
+                <select id="crop_id" class="form__field" name="crop" required="required">
+                    <option value="0" disabled>Select Crop</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Maize">Maize</option>
+                    <option value="Chickpea">Chickpea</option>
+                    <option value="Kidneybeans">Kidneybeans</option>
+                    <option value="Pigeonpeas">Pigeonpeas</option>
+                    <option value="Mothbean">Mothbean</option>
+                    <option value="Mungbean">Mungbean</option>
+                    <option value="Blackgram">Blackgram</option>
+                    <option value="Lentil">Lentil</option>
+                    <option value="Pomegranate">Pomegranate</option>
+                    <option value="Banana">Banana</option>
+                    <option value="Mango">Mango</option>
+                    <option value="Grapes">Grapes</option>
+                    <option value="Watermelon">Watermelon</option>
+                    <option value="Muskmelon">Muskmelon</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Papaya">Papaya</option>
+                    <option value="Cotton">Cotton</option>
+                    <option value="Coconut">Coconut</option>
+                    <option value="Jute">Jute</option>
+                    <option value="Coffee">Coffee</option>
+                </select>
+
+            </div>
+        </div>
+        <h1>
+            <button class="btn" id="btn" onclick="getval()">
+                SUGGEST
+            </button>
+        </h1>
+
+        <br />
+        <span class="w" id="answer"></span>
+        <br />
+        <div id="blog">
+
+            <div id="highN">
+                <h2>HIGH AMOUNT OF NITROGEN </h2>
+                <ol>
+                    <li>
+                        Plants like squash, cabbage, broccoli and corn use up large amounts of nitrogen while growing.
+                        <br>By
+                        growing
+                        these plants where there is too much nitrogen in soil, the plants will use up the excess
+                        nitrogen.
+                    </li>
+                    <li>
+                        Use mulch (wet grass) while growing crops. Mulch can also include sawdust and scrap soft wood.
+                    </li>
+                </ol>
+            </div>
+            <div id="lowN">
+
+                <h2>LOW AMOUNT OF NITROGEN </h2>
+                <ol>
+
+                    <li>Use manures with high N-concentration. In particular, blood meal, groundnut husks and cake, coco
+                        peat
+                        are
+                        much richer in nitrogen compared to coal or wood ash and fresh poultry or green cowpea manure.
+                    </li>
+                    <li>Cover crops, crop rotation as well as intercropping help prevent nitrogen deficiency by growing
+                        legumes.
+                    </li>
+                    <li>
+                        using synthesized N-containing fertilizers to promote crop recovery from nitrogen deficiency,
+                        e.g. NPK,
+                        nitrolime, ammonium nitrate, urea, etc. Soil testing before a cropping season will help
+                        understand the required
+                        corrections of pH and nutrient content.
+                    </li>
+                </ol>
+            </div>
+
+            <div id="highK">
+
+                <h2>HIGH AMOUNT OF POTASSIUM </h2>
+                <ol>
+                    <li>
+                        Stop applying potassium-rich commercial fertilizer. Apply only commercial fertilizer that has a
+                        '0' in the final number field.
+                        Commercial fertilizers use a three number system for measuring levels of nitrogen, phosphorous
+                        and potassium. The last number stands for potassium.
+                        Another option is to stop using commercial fertilizers all together and to begin using only
+                        organic matter to enrich the soil.
+                    </li>
+                    <li>Grow a cover crop of legumes that will fix nitrogen in the soil. This practice will meet the
+                        soil’s needs for nitrogen without increasing phosphorus or potassium.
+                    </li>
+                    <li>Use NPK fertilizers with low K levels and organic fertilizers since they have low NPK values.
+                    </li>
+                    <li>
+                        Mix crushed eggshells, crushed seashells, wood ash or soft rock phosphate to the soil to add
+                        calcium. Mix in up to 10 percent of organic compost to help amend and balance the soil.
+                    </li>
+                </ol>
+            </div>
+
+            <div id="lowK">
+
+                <h2>LOW AMOUNT OF POTASSIUM </h2>
+                <ol>
+
+                    <li>Mix in muricate of potash or sulphate of potash.
+                    </li>
+                    <li>Try kelp meal, seaweed or Sul-Po-Mag.
+                    </li>
+                    <li>
+                        Bury banana peels an inch below the soils surface.
+                    </li>
+                    <li>
+                        Use Potash fertilizers since they contain high values potassium.
+                    </li>
+                </ol>
+            </div>
+
+            <div id="highP">
+
+                <h2>HIGH AMOUNT OF PHOSPHORUS </h2>
+                <ol>
+
+                    <li>
+                        Avoid adding manure though it contains many key nutrients for your soil but typically including
+                        high levels of phosphorous.
+                        Limiting the addition of manure will help reduce phosphorus being added.
+                    </li>
+                    <li>
+                        Use only phosphorus-free fertilizer – if you can limit the amount of phosphorous added to your
+                        soil, you can let the plants use the existing phosphorus
+                        while still providing other key nutrients such as Nitrogen and Potassium.
+                    </li>
+                    <li>
+                        Plant nitrogen fixing vegetables to increase nitrogen without increasing phosphorous (like beans
+                        and peas).
+                    </li>
+                    <li>
+                        Use crop rotations to decrease high phosphorous levels.
+                    </li>
+                    <li>
+                        Find a fertilizer with numbers such as 10-0-10, where the zero represents no phosphorous.
+                    </li>
+                    <li>
+                        Water your soil – soaking your soil liberally will aid in driving phosphorous out of the soil.
+                    </li>
+                </ol>
+            </div>
+
+            <div id="lowP">
+
+                <h2>LOW AMOUNT OF PHOSPHORUS </h2>
+                <ol>
+
+                    <li>
+                        Bone meal – a fast acting source that is made from ground animal bones which is rich in
+                        phosphorous.
+                    </li>
+                    <li>
+                        Rock phosphate – a slower acting source where the soil needs to convert the rock phosphate into
+                        phosphorous that the plants can use.
+                    </li>
+                    <li>
+                        Phosphorus Fertilizers – applying a fertilizer with a high phosphorous content in the NPK ratio
+                        (example: 10-20-10, 20 being phosphorous percentage).
+                    </li>
+                    <li>
+                        Clay soil – introducing clay particles into your soil can help retain & fix phosphorus
+                        deficiencies.
+                    </li>
+                    <li>
+                        Organic compost – adding quality organic compost to your soil will help increase phosphorous
+                        content.
+                    </li>
+                </ol>
+            </div>
+
+        </div>
+    </div>
+
+</div>

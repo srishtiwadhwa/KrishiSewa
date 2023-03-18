@@ -1,0 +1,39 @@
+
+<div class="main">
+
+    <section class="signup">
+        <!-- <img src="images/signup-bg.jpg" alt=""> -->
+        <div class="container">
+            <div class="signup-content">
+                <form method="post" id="signup-form" class="signup-form" action="profile.html">
+                    <h2 class="form-title">Farmer Registration</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="fname" id="fname" placeholder="First Name" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="lname" id="lname" placeholder="Last Name" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" name="email" id="email" placeholder="Enter your email id" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-input" name="password" id="password" placeholder="Create a password of minimum 6 characters" required/>
+                    </div>
+                   
+                    <div class="form-group">
+                        <input type="number" class="form-input" name="contact" id="contact" placeholder="Contact" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" id="submit"  onClick="func()" class="form-submit" value="Sign up"/>
+                    </div>
+                    <div>
+                        <p>Already a member? <a routerLink="/login">LOGIN</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="image">
+            </div>
+        </div>
+    </section>
+
+</div>

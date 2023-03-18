@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Frontend</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="crop.css" type="text/css"> 
+ 
+</head>
+<body>
+    <header>
+        <div class="logo"><a>
+            <img src="./../../../assets/images/footerlogo.png"></a>
+            <a > 
+            <img id="logo" src="./../../../assets/images/footertxt.png">
+          </a>
+          </div>
+          <div class="topnav" id="myTopnav">
+            <span class="icon"><a href="javascript:void(0);" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a></span>
+            <div id ="exp">
+            <span><a onclick="myF()">Home</a></span>
+            
+            <span><a onclick="myF()">Shop</a></span>
+            
+            <span><a onclick="myF()">Blog</a></span>
+            
+            <span><a onclick="myF()">Services</a></span>
+        
+            <span><a id="last" onclick="myF()"><i class="fa fa-user" aria-hidden="true"></i></a></span>
+          </div>
+        </div>
+        </header>
+        
+        <div class="top">
+    
+        </div>
+
+        <div class="bg">
+            <div class="bx">
+              <h2><span class="quote">CROP PREDICTION</span></h2>
+              <h3>Find out the most suitable crop to grow in your farm</h3><br>
+          
+              <form action="/" method="POST">
+                <div class="form__group">
+                  <div class="box">
+                    <label for="lang" class="form__label">Nitrogen</label>
+                    <input class="form__field" type="text" name="Nitrogen" placeholder="Enter Nitrogen value"
+                      required="required" id="lang">
+                  </div>
+                  <div class="box">
+                    <label for="mem" class="form__label">Potassium</label>
+                    <input class="form__field" type="text" name="Potassium" placeholder="Enter Potassium value"
+                      required="required" id="mem">
+                  </div>
+                  <div class="box">
+                    <label for="sp" class="form__label">Phosphorus</label>
+                    <input class="form__field" type="text" name="Phosphorus" placeholder="Enter Phosphorus value"
+                      required="required" id="sp">
+                  </div>
+                  <div class="box">
+                    <label for="vis" class="form__label">pH level</label>
+                    <input class="form__field" type="text" name="pH" placeholder="Enter pH value(0-14)" required="required"
+                      id="vis">
+                  </div>
+                  <div class="box">
+                    <label for="aud" class="form__label">Rainfall(mm)</label>
+                    <input class="form__field" type="text" name="Rainfall" placeholder="Enter the value in mm"
+                      required="required" id="aud">
+                  </div>
+                  <div class="box">
+                    <label for="city_id" class="form__label">City</label>
+                    <input class="form__field" type="text" name="city" placeholder="Enter the city"
+                      required="required" id="city_id">
+          
+                  </div>
+                </div>
+                <h1>
+                  <button class="btn" type="submit">
+                    PREDICT
+                  </button>
+                </h1>
+              </form>
+              
+              <br />
+              <br /><span class="w" id="answer">
+                
+              </span>
+            </div>
+          
+          </div>
+          
+
+<footer>
+    <div>
+      <img id="footlogo" src="./../../../assets/images/footerlogo.png">
+      <img id="foottxt" src="./../../../assets/images/footertxt.png">
+    </div>
+  </footer>
+  
+  </body>
+  <script>
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+    document.getElementsByTagName("header").style.height = "100px";
+  }
+
+  </script>
+
+</html>
+

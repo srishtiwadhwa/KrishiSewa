@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+header {
+    height: 70px;
+    background-color: #170b0b;
+    margin-top: 0px;
+    width: 100vw;
+    text-align: right;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5%;
+    position:absolute;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    font-family: Poppins;
+     line-height: 1.80857;
+     font-weight: normal;
+     padding-right: 20px;
+
+}
+nav {
+    background-color: #170b0b;
+}
+.top{
+    height: 70px;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #170b0b;
+}
+.logo img{
+    height: 60px;
+    width: 60px;
+}
+#logo{
+    width: 200px;
+    height: 50px;
+}
+#last{
+    margin-right: 5px;
+}
+span {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 300;
+    
+}
+span:hover{
+    color: rgb(221, 163, 54);
+    font-weight: 500;
+}
+span:hover a{
+    color: rgb(221, 163, 54);
+    font-weight: 500;
+}
+span{
+    background-color: #170b0b;
+}
+i:hover{
+   color: rgb(244, 222, 184);
+    
+}
+.icon:hover{
+    background-color: rgba(244, 222, 184, 0);
+    color: rgb(244, 222, 184);
+}
+a:link {
+    color: rgb(244, 222, 184);
+    text-decoration-line: none;
+    font-weight: bolder;
+}
+a:active{
+    color: rgb(221, 163, 54);
+    font-weight: 500;
+}
+
+a:visited {
+    color: rgb(244, 222, 184);
+    text-decoration-line: none;
+    font-weight: bolder;
+}
+a:active {
+    font-weight: bolder;
+    text-decoration-line: none;
+}
+
+.topnav .icon {
+    display: none;
+  }
+.topnav{
+    padding-right: 20px;
+}
+  @media screen and (max-width: 700px) {
+    .topnav span {display: none;}
+    .topnav span.icon {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 700px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive span.icon {
+      
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive span {
+      display: block;
+      text-align: right;
+      margin-right: 10px;
+    }
+    .topnav.responsive{
+        margin-top: 280px;
+
+    }
+    .topnav.responsive .dropdown-content{
+        margin-right: 110px;
+    }
+  }

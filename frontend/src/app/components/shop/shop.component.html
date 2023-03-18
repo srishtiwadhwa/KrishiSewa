@@ -1,0 +1,428 @@
+ <!-- ACCOUNT
+ <div class="col-md-3 clearfix">
+    <div class="header-ctn">
+      <div>
+        <a href="#">
+          <i class="fa fa-heart-o"></i>
+          <span>Your Wishlist</span>
+          <div class="qty">0</div>
+        </a>
+      </div>
+      <div class="dropdown" >
+        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="cursor: pointer;">
+          <i class="fa fa-shopping-cart"></i>
+          <span>Your Cart</span>
+          <div class="qty">7</div>
+        </a>
+        <div class="cart-dropdown" >
+          <div class="cart-list" *ngIf="cartData.data[0].numInCart !== 0">
+            <div class="product-widget" *ngFor="let c of cartData.data; let i=index">
+              <div class="product-img">
+                <img src="{{c.product?.image}}" alt="" width="20px">
+              </div>
+              <div class="product-body">
+                <h3 class="product-name"><a href="#">{{c.product?.name}}</a></h3>
+                <h4 class="product-price"><span class="qty">{{c.numInCart}} x </span>{{c.product?.price | currency:'USD'}}</h4>
+              </div>
+              <button class="delete" (click)="cartService.DeleteProductFromCart(i)"><i class="fa fa-close"></i></button>
+            </div>
+
+
+          </div>
+          <div class="cart-summary">
+            <small>{{cartData.data[0].numInCart !== 0 ? cartData.data.length : 0}} Item(s) selected</small>
+            <h5>TOTAL : {{cartTotal | currency:'USD'}}</h5>
+          </div>
+          <div class="cart-btns">
+            <a routerLink="/cart">View Cart</a>
+            <a routerLink="/checkout">Checkout <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-toggle">
+        <a href="#">
+          <i class="fa fa-bars"></i>
+          <span>Menu</span>
+        </a>
+      </div>
+    </div>
+  </div>
+-->
+
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all" onclick="drop()">
+                            <i class="fa fa-bars"></i>
+                            <span>All departments</span>
+                            <i class="fa fa-angle-down" style="font-size:24px; float: right; margin-right: 0%;"></i>
+                        </div>
+                        <ul id="droplist">
+                            <li><a routerLink="/thankyou">Seeds</a></li>
+                            <li><a routerLink="/checkout">Fertilizers</a></li>
+                            <li><a routerLink="/cart">Water Soluble Fertilizers</a></li>
+                            <li><a routerLink="/thankyou">Micronutrients</a></li>
+                            <li><a href="#redirect">NPK fertilizers</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
+                        <div class="hero__search__form">
+                            <form action="#">
+                                <div class="hero__search__categories">
+                                    All Categories
+                                    <span class="arrow_carrot-down"></span>
+                                </div>
+                                <input type="text" placeholder="What do yo u need?">
+                                <button type="submit" class="site-btn">SEARCH</button>
+                            </form>
+                        </div>
+                        <!-- ACCOUNT -->
+							<div class="header-ctn">
+								<!-- Wishlist -->
+								<div>
+									<a href="#">
+										<i class="fa fa-heart-o"></i>
+										<span>Your Wishlist</span>
+										<div class="qty">2</div>
+									</a>
+								</div>
+								<!-- /Wishlist -->
+
+								<!-- Cart -->
+								<div class="dropdown" onclick="cartdrop()">
+									<a >
+										<i class="fa fa-shopping-cart"></i>
+										<span>Your Cart    <i class="fa fa-angle-down" style="font-size:16px"></i></span>
+										<div class="qty">3</div>
+                                        
+									</a>
+									<div class="cart-dropdown" id="cart-drop">
+										<div class="cart-list">
+											<div class="product-widget">
+												<div class="product-img">
+													<img src="./../../../assets/images/shopclipart.png" width="120px" height="60px"alt="">
+												</div>
+												<div class="product-body">
+													<h6 class="product-name"><a href="#">product name goes here</a></h6>
+													<p class="product-price"><span class="qty">1x</span>$980.00</p>
+												</div>
+												<button class="delete"><i class="fa fa-close"></i></button>
+											</div>
+
+											<div class="product-widget">
+												<div class="product-img">
+													<img src="./../../../assets/images/shopclipart.png" width="120px" height="60px"alt="">
+												</div>
+												<div class="product-body">
+													<h6 class="product-name"><a href="#">product name goes here</a></h6>
+													<p class="product-price"><span class="qty">3x</span>$980.00</p>
+												</div>
+												<button class="delete"><i class="fa fa-close"></i></button>
+											</div>
+										</div>
+										<div class="cart-summary">
+											<small>2 Item(s) selected</small>
+											<h5>SUBTOTAL: Rs2940.00</h5>
+										</div>
+										<div class="cart-btns">
+											<a href="#">View Cart</a>
+											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+										</div>
+									</div>
+								</div>
+								<!-- /Cart -->
+						</div>
+						<!-- /ACCOUNT -->
+                        
+                    </div>
+                    <div class="hero__item set-bg" data-setbg="./../../../assets/images/shopcardleft.jpeg">
+                        <div class="hero__text">
+                            <span>KRISHI SEWA</span>
+                            <h2>SEEDS AND FERTILIZERS<br />100% Organic</h2>
+                            <p>Free Pickup and Delivery Available</p>
+                            <a href="#" class="primary-btn">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!--about section start -->
+<div class="services_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1 class="services_taital">All you need to know about <span lang="hi">कृषि‍ सेवा</span> E-commerce Services</h1>
+          <p class="services_text">Vitt Vichaar is an online financial advisor tool for women entrepreneurs. Our idea behind this project to provide a one stop assistance to women who need finacial advices free of cost. We provide services such as prediction of closing price of a stock or a crypto so that they know where to invest and when to buy/sell a particular stock's share. We also provide all necessary information in the form of our precise and crisp blogs. We also provide a planner service in which users can add reminders of their premium installments in calendar.</p>
+        </div>
+        <div class="col-md-5" >
+          <div><img src="./../../../assets/images/shopclipart.png" class="image_1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--about section end -->
+
+    <!-- Categories Section Begin -->
+    <section class="categories">
+        <div class="section-title">
+            <h2>Product Categories</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                    <div class="col-xs-5">
+                        <div class="categories__item" id="c1">
+                            <h5><a href="#redirect">Seeds</a></h5>
+                        
+                    </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="categories__item" id="c2">
+                            <h5><a href="#redirect">Fertilizers</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="categories__item" id="c3">
+                            <h5><a href="#redirect">Water Soluble Fertilizers</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="categories__item" id="c4">
+                            <h5><a href="#redirect">Micronutrients</a></h5>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-5">
+                        <div class="categories__item" id="c5">
+                            <h5><a href="#">NPK fertilizers</a></h5>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- Categories Section End -->
+
+    <!-- Featured Section Begin -->
+    <section class="featured" id="redirect">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Featured Products</h2>
+                    </div>
+                    <div class="featured__controls">
+                        <ul id="list">
+                            <li class="active" onclick="main()" id="l1"><a>All</a></li>
+                            <li onclick="seeds()" id="l2"><a>Seeds</a></li>
+                            <li onclick="fert()" id="l3"><a>Fertilizers</a></li>
+                            <li onclick="watersol()" id="l4"><a>Water soluble fertilizers</a></li>
+                            <li onclick="micro()" id="l5"><a>Micronutrients</a></li>
+                            <li onclick="npk()" id="l6"><a>NPK</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row featured__filter" id="all">
+                <div id="abc">
+                    <div class="featured__item" *ngFor="let p of products">
+                        <div class="featured__item__pic">
+                            <h5 class="cart">{{ p.quantity < 1 ? "NO STOCK" : "Available" }}</h5>
+                            <img [src] = p.image class="easy">
+                            <ul class="featured__item__pic__hover">
+                                <li><button style="border-radius: 50%; background-color: #7fad39; border: 0;"><a href="#"><i class="fa fa-heart"></i></a></button></li>
+                                <li><button [class.disabled]="p.quantity < 1"
+                                    [class.btn-outline-danger]="p.quantity < 1"
+                                    [disabled]="p.quantity < 1"style="border-radius: 50%; background-color: #7fad39; border: 0;"><a href="#" ><i class="fa fa-shopping-cart"></i></a></button></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h5 style="color: wheat;">{{p.name }}
+                            <span class="weight">{{p.weight}}kg</span></h5>
+                            <p>Rs.{{p.price}}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row featured__filter" id="seeds">
+                <div id="abc">
+                    <div class="featured__item" *ngFor="let p of onlyseeds">
+                        <div class="featured__item__pic">
+                            <h5 class="cart">{{ p.quantity < 1 ? "NO STOCK" : "Available" }}</h5>
+                            <img [src] = p.image class="easy">
+                            <ul class="featured__item__pic__hover">
+                                <li><button style="border-radius: 50%; background-color: #7fad39; border: 0;"><a href="#"><i class="fa fa-heart"></i></a></button></li>
+                                <li><button [class.disabled]="p.quantity < 1"
+                                    [class.btn-outline-danger]="p.quantity < 1"
+                                    [disabled]="p.quantity < 1"style="border-radius: 50%; background-color: #7fad39; border: 0;"><a href="#" ><i class="fa fa-shopping-cart"></i></a></button></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h5 style="color: wheat;">{{p.name}}
+                            <span class="weight">{{p.weight}}kg</span></h5>
+                            <p>Rs.{{p.price}}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row featured__filter" id="fert">
+                <div id="abc">
+                    <div class="featured__item" *ngFor="let p of onlyfertilizers">
+                        <div class="featured__item__pic">
+                            <h5 class="cart">{{ p.quantity < 1 ? "NO STOCK" : "Available" }}</h5>
+                            <img [src] = p.image class="easy">
+                            <ul class="featured__item__pic__hover">
+                                <li><button style="border-radius: 50%; background-color: #7fad39; border: 0;"><a href="#"><i class="fa fa-heart"></i></a></button></li>
+                                <li><button [class.disabled]="p.quantity < 1"
+                                    [class.btn-outline-danger]="p.quantity < 1"
+                                    [disabled]="p.quantity < 1"style="border-radius: 50%; background-color: #7fad39; border: 0;"><a href="#" ><i class="fa fa-shopping-cart"></i></a></button></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h5 style="color: wheat;">{{p.name }}
+                            <span class="weight">{{p.weight}}kg</span></h5>
+                            <p>Rs.{{p.price}}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row featured__filter" id="watersol">
+                <div id="abc">
+                    <div class="featured__item" *ngFor="let p of onlywatersol">
+                        <div class="featured__item__pic">
+                            <h5 class="cart">{{ p.quantity < 1 ? "NO STOCK" : "Available" }}</h5>
+                            <img [src] = p.image class="easy">
+                            <ul class="featured__item__pic__hover">
+                                <li><button style="border-radius: 50%; background-color: #7fad39; border: 0;"><a href="#"><i class="fa fa-heart"></i></a></button></li>
+                                <li><button [class.disabled]="p.quantity < 1"
+                                    [class.btn-outline-danger]="p.quantity < 1"
+                                    [disabled]="p.quantity < 1"style="border-radius: 50%; background-color: #7fad39; border: 0;"><a href="#" ><i class="fa fa-shopping-cart"></i></a></button></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h5 style="color: wheat;">{{p.name }}
+                            <span class="weight">{{p.weight}}kg</span></h5>
+                            <p>Rs.{{p.price}}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row featured__filter" id="micro">
+                <div id="abc">
+                    <div class="featured__item" *ngFor="let p of onlymicronutrients">
+                        <div class="featured__item__pic">
+                            <h5 class="cart">{{ p.quantity < 1 ? "NO STOCK" : "Available" }}</h5>
+                            <img [src] = p.image class="easy">
+                            <ul class="featured__item__pic__hover">
+                                <li><button style="border-radius: 50%; background-color: #7fad39; border: 0;"><a href="#"><i class="fa fa-heart"></i></a></button></li>
+                                <li><button [class.disabled]="p.quantity < 1"
+                                    [class.btn-outline-danger]="p.quantity < 1"
+                                     [disabled]="p.quantity < 1"style="border-radius: 50%; background-color: #7fad39; border: 0;"><a href="#" ><i class="fa fa-shopping-cart"></i></a></button></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h5 style="color: wheat;">{{p.name }}
+                            <span class="weight">{{p.weight}}kg</span></h5>
+                            <p>Rs.{{p.price}}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row featured__filter" id="npk">
+                <div id="abc">
+                    <div class="featured__item" *ngFor="let p of onlynpk">
+                        <div class="featured__item__pic">
+                            <h5 class="cart">{{ p.quantity < 1 ? "NO STOCK" : "Available" }}</h5>
+                            <img [src] = p.image class="easy">
+                            <ul class="featured__item__pic__hover">
+                                <li><button style="border-radius: 50%; background-color: #7fad39; border: 0;"><a href="#"><i class="fa fa-heart"></i></a></button></li>
+                                <li><button [class.disabled]="p.quantity < 1"
+                                    [class.btn-outline-danger]="p.quantity < 1"
+                                    [disabled]="p.quantity < 1"style="border-radius: 50%; background-color: #7fad39; border: 0;"><a href="#" ><i class="fa fa-shopping-cart"></i></a></button></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h5 style="color: wheat;">{{p.name }}
+                            <span class="weight">{{p.weight}}kg</span></h5>
+                            <p>Rs.{{p.price}}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Section End -->
+
+
+    <!-- Blog Section Begin -->
+    <section class="from-blog" style="padding-bottom: 0; margin-bottom: 0;">
+        <div class="container" style="padding-bottom: 0; margin-bottom: 0;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title from-blog__title">
+                        <h2>From The Blog</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="./../../../assets/images/shopbg.png" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                                <li><i class="fa fa-comment-o"></i> 5</li>
+                            </ul>
+                            <h5><a href="#">Cooking tips make cooking simple</a></h5>
+                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="./../../../assets/images/shopbg.png" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                                <li><i class="fa fa-comment-o"></i> 5</li>
+                            </ul>
+                            <h5><a href="#">6 ways to prepare breakfast for 30</a></h5>
+                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="./../../../assets/images/shopbg.png" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
+                                <li><i class="fa fa-comment-o"></i> 5</li>
+                            </ul>
+                            <h5><a href="#">Visit the clean farm in the US with family</a></h5>
+                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
